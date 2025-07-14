@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>생명 중심 원리</title>
+</head>
+<body>
+    <header>
+        <h1>생명 중심 원리 CONVERTER</h1>
+    </header>
+    <div class="select">
+        <label for="datatype">염기서열 종류를 선택하세요</label>
+        <select name="datatype" id="datatype">
+            <option value="I">주형 가닥</option>
+            <option value="II">비주형 가닥</option>
+            <option value="mRNA">mRNA</option>
+        </select>
+    </div>
+    <div class="input">
+        <input type="text" name="datatext" id="datatext">
+        <button id="submit">확인</button>
+    </div>
+    <div class="result">
+        <div class="I"></div>
+        <div class="II"></div>
+        <div class="mRNA"></div>
+        <div class="tRNA"></div>
+        <div class="protein"></div>
+    </div>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-info"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

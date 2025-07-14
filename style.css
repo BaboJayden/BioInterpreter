@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=SUIT&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'SUIT', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom right, #ffe6e6, #ffc1cc);
+    color: #4b2e2e;
+    padding: 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #d6336c;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+.select, .input {
+    background-color: #fff0f5;
+    border: 2px solid #ffafcc;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 1.1rem;
+    color: #a05263;
+    display: block;
+    margin-bottom: 10px;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ffb6c1;
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff4d6d;
+}
+
+.result {
+    margin-top: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    gap: 15px;
+}
+
+.result div {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #ff6f91;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.result .I::before {
+    content: "주형 가닥: ";
+    font-weight: bold;
+    color: #d6336c;
+}
+
+.result .II::before {
+    content: "비주형 가닥: ";
+    font-weight: bold;
+    color: #c9184a;
+}
+
+.result .mRNA::before {
+    content: "mRNA: ";
+    font-weight: bold;
+    color: #a4133c;
+}
+
+.result .tRNA::before {
+    content: "tRNA: ";
+    font-weight: bold;
+    color: #800f2f;
+}
+
+.result .protein::before {
+    content: "단백질 서열: ";
+    font-weight: bold;
+    color: #590d22;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    color: #d6336c;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 24px;
+    cursor: pointer;
+}
